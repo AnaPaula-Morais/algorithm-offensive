@@ -45,4 +45,40 @@ function algorithm6(){
     console.log("The successor and predecessor de " + num + " is " + successor + " and " + predecessor);
 
 }
-algorithm6();
+
+//007 - Read two integers and print the sum. Before the result, it should appear the message: Sum.
+
+function algorithm7(){
+    var num1 = parseInt(prompt("Type an interger"));
+    var num2 = parseInt(prompt("Type another interger"));
+    var sum = num1 + num2;
+    console.log("Sum = " + sum);
+}
+
+
+function algorithm8(n){
+    var output = [];
+    if(n === 1){
+        output = [0];
+    }else if (n === 2){
+        output = [0,1];
+    }else{
+        output = [0, 1];
+        
+        for (var i = 2; i < n; i++) {
+            output.push(output[output.length - 2] + output[output.length - 1]);
+        }
+        return output;
+    }
+}
+/*function algorithm8(weight, height){
+    var x = Math.pow(height, 2)
+    var y = weight / x;
+    
+    return Math.round(y);
+    
+}
+var x = algorithm8(65, 1.8);
+console.log(x)*/
+
+algorithm8(6);
